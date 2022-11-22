@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4 id = 'data'>{{val}}</h4>
+<!-- {% set records = dict() %} -->
+
+<!-- {%for row in df %}
+    {% set records = ({ loop.index : row }) %}
+    <h4 class="val">{{loop.index , records[loop.index]}}</h4>
+
+{% endfor %} -->
+
+<!-- <select id="valuesdropdown">
+</select>
+<script>
+    var users = {{val | tojson | safe}}
+    const valuesdropdown = document.getElementById('valuesdropdown')
+    for (let key in users){
+        console.log(key);
+        let option = document.createElement("option");
+        option.setAttribute('value', data[key]);
+
+        let optionText = document.createTextNode(key);
+        option.append(optionText);
+
+        valuesdropdown.appendChild(option);
+    }
+</script> -->
+
+</body>
+</html>

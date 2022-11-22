@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="http://127.0.0.1:5000">Home Page</a></li>
+        <li><a href="http://127.0.0.1:5000/load">Load Data</a></li>
+        <li><a href="http://127.0.0.1:5000/find">Find data</a></li>
+        <li><a href="http://127.0.0.1:5000/delete">Delete data</a></li>
+      </ul>
+      <style>
+        ul{
+            list-style-type: none;
+            margin-top: 25px;
+            padding-left: 10px;
+            overflow: hidden;
+        }
+        li{
+            float: left;
+        }
+        li a {
+            display: block;
+            padding: 8px;
+            background-color: rgb(28, 174, 211);
+        }
+      </style>
+    <!-- add data -->
+    <form action='{{ url_for("add_value")}}' method = "POST">
+        <label for="name">Name</label>
+        <input type = "text" id = "name" name = "Name" placeholder = 'name' style="margin-left: 60px;"/><br><br>
+        <label for="latitude">Latitude</label>
+        <input type = "number" step = "any"id = 'latitude' name = "Latitude" placeholder = 'latitude' style="margin-left: 45px;"/><br><br>
+        <label for="longitude">Longitude</label>
+        <input type = "number" step = "any" id = 'longitude' name = "Longitude" placeholder = 'longitude' style="margin-left: 32px;"/><br><br>
+        <label for="street">Street</label>
+        <input type = "text" id = 'street' name = "Street" placeholder = 'street' style="margin-left: 60px;"/><br><br>
+        <label for="city">City</label>
+        <input type = "text" id = 'city' name = "City" placeholder = 'city' style="margin-left: 68px;"/><br><br>
+        <label for="province">Province</label>
+        <input type = "text" id = 'province' name = "Province" placeholder = 'province' style="margin-left: 40px;"/><br><br>
+        <input type = "submit" value = "submit" onclick="alert('Value is added')"/>
+    </form>
+
+</body>
+</html>
